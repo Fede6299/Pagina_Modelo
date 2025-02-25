@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejemplo de página</title>
+	<!-- Enlace a Font desde un CDN -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Chango&family=Farro:wght@300;400;500;700&display=swap"
+		rel="stylesheet">
+	<!-- Enlace a archivo CSS -->
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+	<div id="contenido">
+		<header>
+			<h1>Bienvenido a Mi Página</h1>
+			<h2>Tiempo en la página: </h2>
+		</header>
+
+		<div class="contenedor">
+			<aside id="aide_izq">
+				<h2>Primera Sección</h2>
+				<p>Contenido de la primera sección.</p>
+				<ul>
+					<li><a href="#">Noticia 1</a></li>
+					<li><a href="#">Noticia 2</a></li>
+					<li><a href="#">Noticia 3</a></li>
+				</ul>
+			</aside>
+
+			<main>
+				<form action="/submit" method="post">
+					<fieldset>
+						<legend>Formulario de Contacto</legend>
+
+						<label for="nombre">Nombre:</label>
+						<input type="text" id="nombre" name="nombre" required>
+
+						<label for="email">Correo Electrónico:</label>
+						<input type="email" id="email" name="email" required>
+
+						<label for="mensaje">Mensaje:</label>
+						<textarea id="mensaje" name="mensaje" required></textarea>
+
+						<input type="submit" value="Enviar">
+					</fieldset>
+				</form>
+			</main>
+
+			<aside id="aide_der">
+				<h2>Segunda Sección</h2>
+				<p>Contenido de la segunda sección.</p>
+				<ul>
+					<li><a href="#">Noticia 1</a></li>
+					<li><a href="#">Noticia 2</a></li>
+					<li><a href="#">Noticia 3</a></li>
+				</ul>
+			</aside>
+		</div>
+
+		<section id="seccionImagen">
+			<button id="agregarImagen">Mostrar Imagen</button>
+			<div id="imagenFigura">
+				<figure>
+					<img src="https://www.fktech.net/static/website/images/logo-large.e1e419b47ac4.svg"
+						alt="Descripción de la imagen">
+					<figcaption>Proyecto para FK {TECH}.</figcaption>
+				</figure>
+				<button id="quitarImagen">Quitar Imagen</button>
+			</div>
+		</section>
+
+	</div>
+	<footer>
+		<p>&copy; 2025 Mi Página. Todos los derechos reservados.</p>
+	</footer>
+	<script src="../js/main.js"></script>
+</body>
+
+</html>

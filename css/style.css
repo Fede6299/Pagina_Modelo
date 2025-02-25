@@ -1,0 +1,230 @@
+/* Variables CSS */
+:root {
+	--main-color: #2c333d;
+	--secondary-color: #cedbbd;
+	--header_font: "Chango", sans-serif;
+	--main_font: "Farro", sans-serif;
+}
+
+/* Reset de estilos */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Estilos básicos del cuerpo */
+body {
+	font-family: var(--main_font);
+	line-height: 1.6;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: var(--secondary-color);
+}
+
+/* Contenido principal (header + main + footer) */
+#contenido {
+	flex: 1;
+	display: flex;
+    flex-direction: column;
+}
+
+#countup {
+  font-weight: bold;
+  text-align: center;
+	display: inline;
+	padding: 5px;
+	border: var(--secondary-color) solid 1px;
+}
+
+/* Encabezado */
+header {
+	background-color: var(--main-color);
+	color: var(--secondary-color);
+	padding: 20px 0;
+	text-align: center;
+}
+
+header h1 {
+	font-family: var(--header_font);
+	font-weight: 400;
+	margin-bottom: 0;
+}
+
+/* Contenedor principal */
+.contenedor {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: 90% auto;
+	gap: 10px;
+	margin: 20px 0;
+	flex: 1;
+}
+
+/* Secciones de aside */
+aside {
+	background: #f4f4f4;
+	padding: 10px;
+}
+
+#aide_izq, #aide_der {
+	transition: transform 0.5s ease-in-out;
+}
+
+#aide_izq:hover {
+  transform: translateX(50px);
+}
+
+#aide_der:hover {
+	transform: translateX(-50px);
+}
+
+aside h2 {
+	margin-bottom: 10px;
+	font-family: var(--header_font);
+	font-weight: 400;
+	color: var(--main-color);
+}
+
+aside ul {
+	list-style: none;
+	padding: 0;
+}
+
+/* Formulario */
+form {
+	background: #f4f4f4;
+	padding: 20px;
+	height: 100%;
+	border: 1px solid #ddd;
+	color: var(--secondary-color);
+}
+
+fieldset {
+	border: 1px solid var(--main-color);
+	padding: 10px;
+	margin-bottom: 40px;
+}
+
+legend {
+	padding: 0 10px;
+	font-weight: bold;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+input, textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ddd;
+}
+
+input[type="submit"] {
+	background: var(--main-color);
+	color: var(--secondary-color);
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--secondary-color);
+	border: 2px solid var(--main-color);
+	color: var(--main-color);
+}
+
+#seccionImagen {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+button {
+  background-color: var(--main-color); /* Color de fondo */
+  color: var(--secondary-color); /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Relleno */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Mostrar en línea */
+  font-size: 16px; /* Tamaño de la fuente */
+  margin: 4px 2px; /* Margen */
+  cursor: pointer; /* Puntero del cursor */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+	border: 2px solid var(--main-color);
+	color: var(--main-color);
+}
+
+/* Figura de imagen */
+figure {
+	margin: 20px 0;
+	text-align: center;
+}
+
+figure img {
+	max-width: 100%;
+	height: auto;
+}
+
+figcaption {
+	margin-top: 10px;
+	font-style: italic;
+}
+
+/* Pie de página */
+footer {
+	background: var(--main-color);
+	color: var(--secondary-color);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+	.contenedor {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+	}
+
+	aside:nth-of-type(1) {
+		order: 1;
+	}
+
+	aside:nth-of-type(2) {
+		order: 2;
+	}
+
+	#aide_izq:hover {
+		transform: translateY(50px);
+	}
+
+	#aide_der:hover {
+		transform: translateY(50px);
+	}
+
+	main {
+		order: 3;
+	}
+
+	aside, main, form {
+		margin: 10px 0;
+		padding: 10px;
+	}
+
+	fieldset {
+		margin-bottom: 2px;
+	}
+
+	figure {
+		margin: 10px 0;
+	}
+}
